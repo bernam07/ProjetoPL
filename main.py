@@ -17,4 +17,7 @@ if __name__ == "__main__":
             pass
 
     result = parser.parse(code)
-    execute_program(result)
+    if result is None:
+        print("Erro de sintaxe ao interpretar o ficheiro.")
+    else:
+        execute_program(result)

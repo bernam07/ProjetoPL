@@ -1,0 +1,13 @@
+IMPORT TABLE estacoes FROM "examples/estacoes.csv";
+IMPORT TABLE observacoes FROM "examples/observacoes.csv";
+PRINT TABLE estacoes;
+PRINT TABLE observacoes;
+SELECT Id,Temperatura,DataHoraObservacao FROM observacoes WHERE Temperatura >= 18 AND Temperatura <= 22;
+SELECT * FROM observacoes LIMIT 3;
+CREATE TABLE frias SELECT * FROM observacoes WHERE Temperatura <= 18;
+CREATE TABLE cruzado FROM estacoes JOIN observacoes USING(Id);
+RENAME TABLE cruzado final;
+EXPORT TABLE frias AS "observacoes_frias.csv";
+EXPORT TABLE final AS "estacoes_observacoes_final.csv";
+DISCARD TABLE observacoes;
+PRINT TABLE final;

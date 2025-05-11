@@ -10,10 +10,10 @@ def execute_program(commands):
 def execute_command(cmd):
     match cmd:
         case ('import', name, path):
-            path_with_folder = join('examples', path)
-            tables[name] = load_csv(path_with_folder)
+            path_with_folder = "examples/" + path
+            tables[name] = load_csv(path)
         case ('export', name, path):
-            path_with_folder = join('examples', path)  # Se necessário exportar para a pasta 'examples'
+            path_with_folder = join('examples/ficheiros_criados', path)
             save_csv(tables[name], path_with_folder)
         case ('discard', name):
             tables.pop(name, None)

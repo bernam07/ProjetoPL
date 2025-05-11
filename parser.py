@@ -92,7 +92,7 @@ def p_command_create_join(p):
     p[0] = ('create_join', p[3], p[5], p[7], p[10])
 
 def p_command_procedure(p):
-    """command : PROCEDURE ID DO commands END"""
+    """command : PROCEDURE ID DO commands END SEMI"""
     p[0] = ('procedure', p[2], p[4])
 
 def p_command_call(p):
