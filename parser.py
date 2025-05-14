@@ -27,7 +27,7 @@ def p_command_discard(p):
     p[0] = ('discard', p[3])  # AST: ('discard', nome_tabela)
 
 def p_command_rename(p):
-    """command : RENAME ID ID SEMI"""
+    """command : RENAME TABLE ID ID SEMI"""
     p[0] = ('rename', p[3], p[4])  # AST: ('rename', antigo, novo)
 
 def p_command_print(p):
