@@ -1,5 +1,5 @@
-IMPORT TABLE estacoes FROM "examples/estacoes.csv";
-IMPORT TABLE observacoes FROM "examples/observacoes.csv";
+IMPORT TABLE estacoes FROM "estacoes.csv";
+IMPORT TABLE observacoes FROM "observacoes.csv";
 PRINT TABLE estacoes;
 PRINT TABLE observacoes;
 SELECT Id,Temperatura,DataHoraObservacao FROM observacoes WHERE Temperatura >= 18 AND Temperatura <= 22;

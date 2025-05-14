@@ -7,7 +7,7 @@ if __name__ == "__main__":
         with open(sys.argv[1]) as f:
             code = f.read()
     else:
-        print("Modo interativo (Ctrl+D para sair)")
+        print("Modo interativo")
         code = ""
         try:
             while True:
@@ -15,6 +15,8 @@ if __name__ == "__main__":
                 code += line + "\n"
         except EOFError:
             pass
+    
+    print(f"Código escrito:\n{code}")
 
     result = parser.parse(code)
     if result is None:
