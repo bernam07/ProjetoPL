@@ -1,5 +1,5 @@
-IMPORT TABLE estacoes FROM "examples/estacoes.csv";
-IMPORT TABLE observacoes FROM "examples/observacoes.csv";
+IMPORT TABLE estacoes FROM "estacoes.csv";
+IMPORT TABLE observacoes FROM "observacoes.csv";
 PRINT TABLE estacoes;
 SELECT * FROM observacoes WHERE Temperatura > 20 LIMIT 2;
 CREATE TABLE quente SELECT * FROM observacoes WHERE Temperatura > 22;
